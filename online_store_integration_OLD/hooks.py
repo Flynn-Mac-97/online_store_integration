@@ -1,7 +1,7 @@
 app_name = "online_store_integration"
 app_title = "Online Store Integration"
-app_publisher = "Flynn"
-app_description = "Connects various online stores to erpnext."
+app_publisher = "Flynn McMurray"
+app_description = "Integrates online stores with frappe."
 app_email = "jamesmcmurray1997@gmail.com"
 app_license = "mit"
 
@@ -44,14 +44,10 @@ app_license = "mit"
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
-#doctype_list_js = {
-#    "Online Store": "public/js/online_store_list.js"
-#}
+# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
-#app_include_css = [
-#    "/assets/online_store_integration/css/online_store.css"
-#]
+
 # Svg Icons
 # ------------------
 # include app icons in desk
@@ -73,6 +69,9 @@ app_license = "mit"
 
 # automatically create page for each record of this doctype
 # website_generators = ["Web Page"]
+
+# automatically load and sync documents of this doctype from downstream apps
+# importable_doctypes = [doctype_1]
 
 # Jinja
 # ----------
@@ -129,14 +128,6 @@ app_license = "mit"
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
-# DocType Class
-# ---------------
-# Override standard doctype classes
-
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
-
 # Document Events
 # ---------------
 # Hook on document methods and events
@@ -174,6 +165,14 @@ app_license = "mit"
 # -------
 
 # before_tests = "online_store_integration.install.before_tests"
+
+# Extend DocType Class
+# ------------------------------
+#
+# Specify custom mixins to extend the standard doctype controller.
+# extend_doctype_class = {
+# 	"Task": "online_store_integration.custom.task.CustomTaskMixin"
+# }
 
 # Overriding Methods
 # ------------------------------

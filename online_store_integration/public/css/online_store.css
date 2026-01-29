@@ -1,0 +1,7 @@
+/* Hide the ID (name) column in Online Store list view */
+[data-page-route="List/Online Store/List"] 
+.list-row-col[data-fieldname="name"],
+[data-page-route="List/Online Store/List"] 
+.list-header-col[data-fieldname="name"] {
+  display: none !important;
+}
