@@ -1,0 +1,91 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"VbzId5WZ03\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h2\\\"><b>Dashboard Overview</b><span class=\\\"h1\\\"></span></span>\",\"col\":12}},{\"id\":\"t3hI-N4D0u\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Summary Bar\",\"col\":12}},{\"id\":\"32JIYo2hN_\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Synced Stores\",\"col\":3}},{\"id\":\"SR6QTWzNwx\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"UbdNmSFqT5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stores\",\"col\":3}},{\"id\":\"9A4iT8CYH7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Products\",\"col\":3}},{\"id\":\"7I3L29SAkv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Orders\",\"col\":3}},{\"id\":\"72pMedYMht\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Store Connection Settings\",\"col\":3}},{\"id\":\"uaGUsaJLoo\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"ocR9TUV_06\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Stores\",\"col\":4}},{\"id\":\"46g-e8dWx1\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Products\",\"col\":4}},{\"id\":\"Abxtyxb-9k\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Orders\",\"col\":4}}]",
+ "creation": "2026-01-19 22:39:30.636975",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Summary Bar",
+   "label": "Summary Bar"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "retail",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "eCommerce",
+ "links": [],
+ "modified": "2026-01-28 16:34:15.030075",
+ "modified_by": "Administrator",
+ "module": "Online Store Integration",
+ "name": "eCommerce",
+ "number_cards": [
+  {
+   "label": "Synced Stores",
+   "number_card_name": "Total Synced Stores"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Online Store",
+   "label": "Stores",
+   "quick_list_filter": "[]"
+  },
+  {
+   "document_type": "Online Sales Order",
+   "label": "Orders",
+   "quick_list_filter": "[]"
+  },
+  {
+   "document_type": "Online Product",
+   "label": "Products",
+   "quick_list_filter": "[]"
+  }
+ ],
+ "roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Products",
+   "link_to": "Online Product",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Stores",
+   "link_to": "Online Store",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Orders",
+   "link_to": "Online Sales Order",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Store Connection Settings",
+   "link_to": "n8n Settings",
+   "type": "DocType"
+  }
+ ],
+ "title": "eCommerce"
+}

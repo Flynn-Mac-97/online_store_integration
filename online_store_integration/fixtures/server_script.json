@@ -1,0 +1,21 @@
+[
+ {
+  "allow_guest": 0,
+  "api_method": "n8n_ping",
+  "cron_format": null,
+  "disabled": 1,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "Before Insert",
+  "enable_rate_limit": 0,
+  "event_frequency": "All",
+  "modified": "2026-01-22 15:38:24.731191",
+  "module": "Online Store Integration",
+  "name": "n8n Ping",
+  "rate_limit_count": 5,
+  "rate_limit_seconds": 86400,
+  "reference_doctype": null,
+  "script": "if frappe.session.user == \"Guest\":\r\n    frappe.throw(\"Authentication required\")\r\n\r\nnow = frappe.utils.now()\r\n\r\n# Load the Single (name == doctype name)\r\nsettings = frappe.get_doc(\"n8n Settings\", \"n8n Settings\")\r\n\r\n# Only update if integration is enabled (optional; remove if you want ping to always set connected)\r\nif not settings.enabled:\r\n    frappe.response[\"ok\"] = False\r\n    frappe.response[\"message\"] = \"n8n Settings is disabled\"\r\n    frappe.response[\"time\"] = now\r\nelse:\r\n    # Update fields (status is a Select, so set the option text)\r\n    settings.db_set(\"status\", \"Connected\", update_modified=False)\r\n    settings.db_set(\"last_sync\", now, update_modified=False)\r\n\r\n    # Append log line (keep it short)\r\n    old_log = settings.n8n_log or \"\"\r\n    line = f\"[{now}] Ping OK (user={frappe.session.user})\"\r\n    new_log = (old_log + \"\\n\" + line).strip()\r\n\r\n    # Keep last ~200 lines\r\n    lines = new_log.splitlines()\r\n    if len(lines) > 200:\r\n        new_log = \"\\n\".join(lines[-200:])\r\n\r\n    settings.db_set(\"n8n_log\", new_log, update_modified=False)\r\n\r\n    # Ensure write is persisted immediately\r\n    frappe.db.commit()\r\n\r\n    frappe.response[\"ok\"] = True\r\n    frappe.response[\"message\"] = \"pong\"\r\n    frappe.response[\"time\"] = now\r\n",
+  "script_type": "API"
+ }
+]

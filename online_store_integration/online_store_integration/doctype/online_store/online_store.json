@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "format:{store_name}-{#####}",
+ "creation": "2026-01-20 13:40:09.194093",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "integration_key",
+  "platform",
+  "region",
+  "platform_shop_id",
+  "column_break",
+  "store_name",
+  "store_url",
+  "last_synced_at",
+  "section_raw",
+  "raw_data_table",
+  "raw_payload_json"
+ ],
+ "fields": [
+  {
+   "fieldname": "integration_key",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Integration Key",
+   "read_only": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "platform",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Platform",
+   "options": "shopee\nlazada",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "description": "e.g., br, ph, sg, my, etc.",
+   "fieldname": "region",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Region",
+   "read_only": 1
+  },
+  {
+   "description": "shop_id / seller_id from the platform",
+   "fieldname": "platform_shop_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Platform Shop ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Human readable store name",
+   "fieldname": "store_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Store Name",
+   "read_only": 1
+  },
+  {
+   "description": "Optional but handy",
+   "fieldname": "store_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Store URL",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_synced_at",
+   "fieldtype": "Datetime",
+   "in_standard_filter": 1,
+   "label": "Last Synced At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_raw",
+   "fieldtype": "Section Break",
+   "label": "Raw Payload"
+  },
+  {
+   "fieldname": "raw_payload_json",
+   "fieldtype": "JSON",
+   "label": "Raw Payload JSON",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "raw_data_table",
+   "fieldtype": "HTML",
+   "label": "Raw Data Table",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-28 16:05:39.386999",
+ "modified_by": "Administrator",
+ "module": "Online Store Integration",
+ "name": "Online Store",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
